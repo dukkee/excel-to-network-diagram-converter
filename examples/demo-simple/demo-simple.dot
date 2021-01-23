@@ -1,0 +1,57 @@
+
+graph {
+
+label=<
+     <table border="0" cellborder="1" cellspacing="0">
+       <tr><td bgcolor="#FFFFFFF"><font color="#000000" point-size="8" ><b>Connection Types</b></font></td></tr>
+       <tr><td bgcolor="#FFFFFFF"><font color="#ff0000" point-size="8" ><b>FC 16G</b></font></td></tr>
+       <tr><td bgcolor="#FFFFFFF"><font color="#1f4800" point-size="8" ><b>FC 32G</b></font></td></tr>
+       <tr><td bgcolor="#FFFFFFF"><font color="#026ff0" point-size="8" ><b>SFP-40/100-SRBD</b></font></td></tr>
+       <tr><td bgcolor="#FFFFFFF"><font color="#A52A2A" point-size="8" ><b>QSFP-40G-SR4</b></font></td></tr>
+       <tr><td bgcolor="#FFFFFFF"><font color="#ff00FF" point-size="8" ><b>QSFP-100G-SR4</b></font></td></tr>
+       <tr><td bgcolor="#FFFFFFF"><font color="#0000FF" point-size="8" ><b>FET10G</b></font></td></tr>
+       <tr><td bgcolor="#FFFFFFF"><font color="#FFA500" point-size="8" ><b>SFP-10G-SR</b></font></td></tr>
+       <tr><td bgcolor="#FFFFFFF"><font color="#800000" point-size="8" ><b>GX-MM</b></font></td></tr>
+       <tr><td bgcolor="#FFFFFFF"><font color="#33ACFF" point-size="8" ><b>GLC-T</b></font></td></tr>
+       <tr><td bgcolor="#FFFFFFF"><font color="#9C33FF" point-size="8" ><b>QSFP-100G-SR4-S+</b></font></td></tr>
+       <tr><td bgcolor="#FFFFFFF"><font color="#FF33E6" point-size="8" ><b>GLC-SX-MM</b></font></td></tr>
+       
+     </table>>
+
+    graph [splines=curved rankdir = "LR"];
+    node [shape = polygon, sides = 8, width = 3, fontsize = 14, color = "#000000" ];
+
+
+subgraph cluster_DEVICEB {
+    "DEVICE-B.Eth3/3" [label="Eth3/3"];
+    "DEVICE-B.Eth3/2" [label="Eth3/2"];
+    label = <DEVICE-B <br/> Arista C8704 <br/> Asset: ACME246439 <br/> SN: GGE23265L42 <br/> IP: 1.2.3.6>;
+  }
+
+subgraph cluster_DEVICED {
+    "DEVICE-D.Eth4/3" [label="Eth4/3"];
+    "DEVICE-D.Eth4/2" [label="Eth4/2"];
+    label = <DEVICE-D <br/> Arista C8704 <br/> Asset: ACME246420 <br/> SN: GGE23275WPH <br/> IP: 1.2.3.7>;
+  }
+
+subgraph cluster_DEVICEA {
+    "DEVICE-A.Eth1/33" [label="Eth1/33"];
+    "DEVICE-A.Eth2/32" [label="Eth2/32"];
+    label = <DEVICE-A <br/> Cisco B4436C-GL2 <br/> Asset: ACME246346 <br/> SN: SGD7240339NT <br/> IP: 1.2.3.11>;
+  }
+
+subgraph cluster_DEVICEC {
+    "DEVICE-C.Eth1/33" [label="Eth1/33"];
+    "DEVICE-C.Eth2/32" [label="Eth2/32"];
+    label = <DEVICE-C <br/> Cisco B4436C-GL2 <br/> Asset: ACME246347 <br/> SN: SGD724030V6U <br/> IP: 1.2.3.12>;
+  }
+
+
+{"DEVICE-A.Eth1/33" -- "DEVICE-B.Eth3/3" [color="#026ff0"]} #ConnectionType QSFP-40/100G-SRBD = 026ff0
+{"DEVICE-A.Eth2/32" -- "DEVICE-D.Eth4/3" [color="#FFA500"]} #ConnectionType SFP-10G-SR = FFA500
+{"DEVICE-C.Eth1/33" -- "DEVICE-B.Eth3/2" [color="#A52A2A"]} #ConnectionType QSFP-40G-SR4 = A52A2A
+{"DEVICE-C.Eth2/32" -- "DEVICE-D.Eth4/2" [color="#33ACFF"]} #ConnectionType Cisco GLC-T = 33ACFF
+
+
+
+}
