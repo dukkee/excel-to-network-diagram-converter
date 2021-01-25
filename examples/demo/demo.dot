@@ -28,7 +28,7 @@ subgraph cluster_B7RNIOS3L2 {
     "B7R-N.IOS3L2.Slot3-Module/P-06-2" [label="Slot3-Module/P-06-2"];
     "B7R-N.IOS3L2.Slot3-Module/P-06-3" [label="Slot3-Module/P-06-3"];
     "B7R-N.IOS3L2.Slot3-Module/P-06-4" [label="Slot3-Module/P-06-4"];
-    label = <B7R-N.IOS3L2 <br/> Arista IOS3L2 <br/>  <br/>  <br/> 1.2.3.4>;
+    label = <B7R-N.IOS3L2 <br/> Arista IOS3L2 <br/>  <br/>  <br/> P07 U02-26 <br/> 1.2.3.4>;
   }
 
 subgraph cluster_B7RSIOS3L2 {
@@ -38,7 +38,7 @@ subgraph cluster_B7RSIOS3L2 {
     "B7R-S.IOS3L2.Slot3-Module/P-06-2" [label="Slot3-Module/P-06-2"];
     "B7R-S.IOS3L2.Slot3-Module/P-06-3" [label="Slot3-Module/P-06-3"];
     "B7R-S.IOS3L2.Slot3-Module/P-06-4" [label="Slot3-Module/P-06-4"];
-    label = <B7R-S.IOS3L2 <br/> Arista IOS3L2 <br/>  <br/>  <br/> 1.2.3.5>;
+    label = <B7R-S.IOS3L2 <br/> Arista IOS3L2 <br/>  <br/>  <br/> P36 U02-26 <br/> 1.2.3.5>;
   }
 
 subgraph cluster_DCACME339BLSW3 {
@@ -49,7 +49,7 @@ subgraph cluster_DCACME339BLSW3 {
     "DC-ACME-339B-LSW3.Eth/22" [label="Eth/22"];
     "DC-ACME-339B-LSW3.Eth/23" [label="Eth/23"];
     "DC-ACME-339B-LSW3.Eth/24" [label="Eth/24"];
-    label = <DC-ACME-339B-LSW3 <br/> B44SW-EL <br/> ACME376353 <br/> GD7230605KL <br/> 1.2.3.14>;
+    label = <DC-ACME-339B-LSW3 <br/> B44SW-EL <br/> ACME376353 <br/> GD7230605KL <br/> NN U36 <br/> 1.2.3.14>;
   }
 
 subgraph cluster_DCACME339BLSW2 {
@@ -57,56 +57,56 @@ subgraph cluster_DCACME339BLSW2 {
     "DC-ACME-339B-LSW2.Eth/39(P7339)" [label="Eth/39(P7339)"];
     "DC-ACME-339B-LSW2.Eth/20(P7339)" [label="Eth/20(P7339)"];
     "DC-ACME-339B-LSW2.Eth/24" [label="Eth/24"];
-    label = <DC-ACME-339B-LSW2 <br/> B44SW-EL <br/> ACME376352 <br/> GD723073P7N <br/> 1.2.3.15>;
+    label = <DC-ACME-339B-LSW2 <br/> B44SW-EL <br/> ACME376352 <br/> GD723073P7N <br/> NG U36 <br/> 1.2.3.15>;
   }
 
 subgraph cluster_DLP05064 {
     "DLP05064.0/Ge30" [label="0/Ge30"];
     "DLP05064.0/Ge32" [label="0/Ge32"];
     "DLP05064.0/Ge33" [label="0/Ge33"];
-    label = <DLP05064 <br/> B7B RXTX MP-7640B <br/> ACME377344 <br/> BRCCWA4023N00J <br/> 1.2.3.16>;
+    label = <DLP05064 <br/> B7B RXTX MP-7640B <br/> ACME377344 <br/> BRCCWA4023N00J <br/> NG U37-36 <br/> 1.2.3.16>;
   }
 
 subgraph cluster_DLP05063 {
     "DLP05063.0/Ge30" [label="0/Ge30"];
     "DLP05063.0/Ge32" [label="0/Ge32"];
-    label = <DLP05063 <br/> B7B RXTX MP-7640B <br/> ACME377343 <br/> BRCCWA4036N004 <br/> 1.2.3.17>;
+    label = <DLP05063 <br/> B7B RXTX MP-7640B <br/> ACME377343 <br/> BRCCWA4036N004 <br/> NN U37-36 <br/> 1.2.3.17>;
   }
 
 subgraph cluster_DCACMEAC7RE {
     "DC-ACMEA-C7RE.Eth/30" [label="Eth/30"];
-    label = <DC-ACMEA-C7RE <br/> B44SW-EL <br/> ACME376354 <br/> GD7230723GS <br/> 1.2.3.18>;
+    label = <DC-ACMEA-C7RE <br/> B44SW-EL <br/> ACME376354 <br/> GD7230723GS <br/> AU 36 <br/> 1.2.3.18>;
   }
 
 subgraph cluster_DCACMEBC7RE {
     "DC-ACMEB-C7RE.Eth/30" [label="Eth/30"];
-    label = <DC-ACMEB-C7RE <br/> B44SW-EL <br/> ACME377070 <br/> GD7230536N6 <br/> 1.2.3.19>;
+    label = <DC-ACMEB-C7RE <br/> B44SW-EL <br/> ACME377070 <br/> GD7230536N6 <br/> IO 36 <br/> 1.2.3.19>;
   }
 
 subgraph cluster_B7R3PE2 {
     "B7R3.PE2.LC3/Te0/3/0/2" [label="LC3/Te0/3/0/2"];
     "B7R3.PE2.LC3/Te0/3/0/34" [label="LC3/Te0/3/0/34"];
-    label = <B7R3.PE2 <br/> Arista 9030 <br/> ACME335349 <br/> G7L3932G9HW <br/> 1.2.3.20>;
+    label = <B7R3.PE2 <br/> Arista 9030 <br/> ACME335349 <br/> G7L3932G9HW <br/> P04 U02-22 <br/> 1.2.3.20>;
   }
 
 subgraph cluster_B7R3PE3 {
     "B7R3.PE3.LC3/Te0/3/0/2" [label="LC3/Te0/3/0/2"];
     "B7R3.PE3.LC3/Te0/3/0/34" [label="LC3/Te0/3/0/34"];
-    label = <B7R3.PE3 <br/> Arista 9030 <br/> ACME302746 <br/> G7C3930NBG6 <br/> 1.2.3.21>;
+    label = <B7R3.PE3 <br/> Arista 9030 <br/> ACME302746 <br/> G7C3930NBG6 <br/> P39 U02-22 <br/> 1.2.3.21>;
   }
 
 subgraph cluster_DCLSW0011 {
     "DC-LSW0011.Eth5/46" [label="Eth5/46"];
     "DC-LSW0011.Eth5/3" [label="Eth5/3"];
     "DC-LSW0011.Eth5/2" [label="Eth5/2"];
-    label = <DC-LSW0011 <br/> Cisco 6800 <br/> ACME065524 <br/> GLS3637Q367 <br/> 1.2.3.22>;
+    label = <DC-LSW0011 <br/> Cisco 6800 <br/> ACME065524 <br/> GLS3637Q367 <br/> P33 U22-30 <br/> 1.2.3.22>;
   }
 
 subgraph cluster_DCLSW0012 {
     "DC-LSW0012.Eth5/46" [label="Eth5/46"];
     "DC-LSW0012.Eth5/3" [label="Eth5/3"];
     "DC-LSW0012.Eth5/2" [label="Eth5/2"];
-    label = <DC-LSW0012 <br/> Cisco 6800 <br/> ACME065530 <br/> GLS3626Q2HL <br/> 1.2.3.23>;
+    label = <DC-LSW0012 <br/> Cisco 6800 <br/> ACME065530 <br/> GLS3626Q2HL <br/> P20 U22-30 <br/> 1.2.3.23>;
   }
 
 subgraph cluster_DCS3H0303 {
@@ -114,7 +114,7 @@ subgraph cluster_DCS3H0303 {
     "DC-S3H0303.Eth/4" [label="Eth/4"];
     "DC-S3H0303.Eth/5" [label="Eth/5"];
     "DC-S3H0303.Eth/6" [label="Eth/6"];
-    label = <DC-S3H0303 <br/> Arista C8704 <br/> ACME246437 <br/> GGE23275W7J <br/> 1.2.3.4>;
+    label = <DC-S3H0303 <br/> Arista C8704 <br/> ACME246437 <br/> GGE23275W7J <br/> AT U24-26 <br/> 1.2.3.4>;
   }
 
 subgraph cluster_DCS3H0302 {
@@ -122,19 +122,19 @@ subgraph cluster_DCS3H0302 {
     "DC-S3H0302.Eth/4" [label="Eth/4"];
     "DC-S3H0302.Eth/5" [label="Eth/5"];
     "DC-S3H0302.Eth/6" [label="Eth/6"];
-    label = <DC-S3H0302 <br/> Arista C8704 <br/> ACME246436 <br/> GGE23275W6E <br/> 1.2.3.5>;
+    label = <DC-S3H0302 <br/> Arista C8704 <br/> ACME246436 <br/> GGE23275W6E <br/> NG U24-26 <br/> 1.2.3.5>;
   }
 
 subgraph cluster_DCS3M0303 {
     "DC-S3M0303.Eth/3" [label="Eth/3"];
     "DC-S3M0303.Eth/2" [label="Eth/2"];
-    label = <DC-S3M0303 <br/> Arista C8704 <br/> ACME246439 <br/> GGE23265L42 <br/> 1.2.3.6>;
+    label = <DC-S3M0303 <br/> Arista C8704 <br/> ACME246439 <br/> GGE23265L42 <br/> AT U02-23 <br/> 1.2.3.6>;
   }
 
 subgraph cluster_DCS3M0302 {
     "DC-S3M0302.Eth/3" [label="Eth/3"];
     "DC-S3M0302.Eth/2" [label="Eth/2"];
-    label = <DC-S3M0302 <br/> Arista C8704 <br/> ACME246420 <br/> GGE23275WPH <br/> 1.2.3.7>;
+    label = <DC-S3M0302 <br/> Arista C8704 <br/> ACME246420 <br/> GGE23275WPH <br/> NG U02-23 <br/> 1.2.3.7>;
   }
 
 subgraph cluster_DCL3H3033 {
@@ -142,7 +142,7 @@ subgraph cluster_DCL3H3033 {
     "DC-L3H3033.Eth/2" [label="Eth/2"];
     "DC-L3H3033.Eth/33" [label="Eth/33"];
     "DC-L3H3033.Eth/32" [label="Eth/32"];
-    label = <DC-L3H3033 <br/> Arista B4436C-GL2 <br/> ACME246343 <br/> SGD724030VMW <br/> 1.2.3.9>;
+    label = <DC-L3H3033 <br/> Arista B4436C-GL2 <br/> ACME246343 <br/> SGD724030VMW <br/> AT U27 <br/> 1.2.3.9>;
   }
 
 subgraph cluster_DCL3H3032 {
@@ -151,45 +151,45 @@ subgraph cluster_DCL3H3032 {
     "DC-L3H3032.Eth/5" [label="Eth/5"];
     "DC-L3H3032.Eth/33" [label="Eth/33"];
     "DC-L3H3032.Eth/32" [label="Eth/32"];
-    label = <DC-L3H3032 <br/> Arista B4436C-GL2 <br/> ACME246344 <br/> SGD72403029L <br/> 1.2.3.10>;
+    label = <DC-L3H3032 <br/> Arista B4436C-GL2 <br/> ACME246344 <br/> SGD72403029L <br/> NG U27 <br/> 1.2.3.10>;
   }
 
 subgraph cluster_DCL3M3033 {
     "DC-L3M3033.Eth/33" [label="Eth/33"];
     "DC-L3M3033.Eth/32" [label="Eth/32"];
-    label = <DC-L3M3033 <br/> Arista B4436C-GL2 <br/> ACME246346 <br/> SGD7240339NT <br/> 1.2.3.11>;
+    label = <DC-L3M3033 <br/> Arista B4436C-GL2 <br/> ACME246346 <br/> SGD7240339NT <br/> AT U26 <br/> 1.2.3.11>;
   }
 
 subgraph cluster_DCL3M3032 {
     "DC-L3M3032.Eth/33" [label="Eth/33"];
     "DC-L3M3032.Eth/32" [label="Eth/32"];
-    label = <DC-L3M3032 <br/> Arista B4436C-GL2 <br/> ACME246347 <br/> SGD724030V6U <br/> 1.2.3.12>;
+    label = <DC-L3M3032 <br/> Arista B4436C-GL2 <br/> ACME246347 <br/> SGD724030V6U <br/> NG U26 <br/> 1.2.3.12>;
   }
 
 subgraph cluster_DCL3H3035 {
     "DC-L3H3035.Eth/53" [label="Eth/53"];
     "DC-L3H3035.Eth/52" [label="Eth/52"];
-    label = <DC-L3H3035 <br/> Arista B44SW-GL2 <br/> ACME246345 <br/> SGD7234606HP <br/> 1.2.3.16>;
+    label = <DC-L3H3035 <br/> Arista B44SW-GL2 <br/> ACME246345 <br/> SGD7234606HP <br/> AQ U42 <br/> 1.2.3.16>;
   }
 
 subgraph cluster_DCL3H3036 {
     "DC-L3H3036.Eth/53" [label="Eth/53"];
     "DC-L3H3036.Eth/52" [label="Eth/52"];
-    label = <DC-L3H3036 <br/> Arista B44SW-GL2 <br/> ACME246346 <br/> SGD723473296 <br/> 1.2.3.17>;
+    label = <DC-L3H3036 <br/> Arista B44SW-GL2 <br/> ACME246346 <br/> SGD723473296 <br/> AQ U40 <br/> 1.2.3.17>;
   }
 
 subgraph cluster_DCLSW0011 {
     "DC-LSW0011.Eth5/46" [label="Eth5/46"];
     "DC-LSW0011.Eth5/3" [label="Eth5/3"];
     "DC-LSW0011.Eth5/2" [label="Eth5/2"];
-    label = <DC-LSW0011 <br/> Cisco 6800 <br/> ACME065524 <br/> GLS3637Q367 <br/> 1.2.3.36>;
+    label = <DC-LSW0011 <br/> Cisco 6800 <br/> ACME065524 <br/> GLS3637Q367 <br/> P33 U22-30 <br/> 1.2.3.36>;
   }
 
 subgraph cluster_DCLSW0012 {
     "DC-LSW0012.Eth5/46" [label="Eth5/46"];
     "DC-LSW0012.Eth5/3" [label="Eth5/3"];
     "DC-LSW0012.Eth5/2" [label="Eth5/2"];
-    label = <DC-LSW0012 <br/> Cisco 6800 <br/> ACME065530 <br/> GLS3626Q2HL <br/> 1.2.3.37>;
+    label = <DC-LSW0012 <br/> Cisco 6800 <br/> ACME065530 <br/> GLS3626Q2HL <br/> P20 U22-30 <br/> 1.2.3.37>;
   }
 
 

@@ -25,25 +25,25 @@ label=<
 subgraph cluster_DEVICEB {
     "DEVICE-B.Eth3/3" [label="Eth3/3"];
     "DEVICE-B.Eth3/2" [label="Eth3/2"];
-    label = <DEVICE-B <br/> Arista C8704 <br/> Asset: ACME246439 <br/> SN: GGE23265L42 <br/> IP: 1.2.3.6>;
+    label = <DEVICE-B <br/> Arista C8704 <br/> Asset: ACME246439 <br/> SN: GGE23265L42 <br/> AT U02-23 <br/> IP: 1.2.3.6>;
   }
 
 subgraph cluster_DEVICED {
     "DEVICE-D.Eth4/3" [label="Eth4/3"];
     "DEVICE-D.Eth4/2" [label="Eth4/2"];
-    label = <DEVICE-D <br/> Arista C8704 <br/> Asset: ACME246420 <br/> SN: GGE23275WPH <br/> IP: 1.2.3.7>;
+    label = <DEVICE-D <br/> Arista C8704 <br/> Asset: ACME246420 <br/> SN: GGE23275WPH <br/> NG U02-23 <br/> IP: 1.2.3.7>;
   }
 
 subgraph cluster_DEVICEA {
     "DEVICE-A.Eth1/33" [label="Eth1/33"];
     "DEVICE-A.Eth2/32" [label="Eth2/32"];
-    label = <DEVICE-A <br/> Cisco B4436C-GL2 <br/> Asset: ACME246346 <br/> SN: SGD7240339NT <br/> IP: 1.2.3.11>;
+    label = <DEVICE-A <br/> Cisco B4436C-GL2 <br/> Asset: ACME246346 <br/> SN: SGD7240339NT <br/> AT U26 <br/> IP: 1.2.3.11>;
   }
 
 subgraph cluster_DEVICEC {
     "DEVICE-C.Eth1/33" [label="Eth1/33"];
     "DEVICE-C.Eth2/32" [label="Eth2/32"];
-    label = <DEVICE-C <br/> Cisco B4436C-GL2 <br/> Asset: ACME246347 <br/> SN: SGD724030V6U <br/> IP: 1.2.3.12>;
+    label = <DEVICE-C <br/> Cisco B4436C-GL2 <br/> Asset: ACME246347 <br/> SN: SGD724030V6U <br/> NG U26 <br/> IP: 1.2.3.12>;
   }
 
 

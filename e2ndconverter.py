@@ -58,7 +58,7 @@ subgraph cluster_{{ item["cluster"] }} {
     {% for module, port in item["modules"] -%}
     "{{ item["device_name"] }}.{{ module }}/{{ port }}" [label="{{ module }}/{{ port }}"];
     {% endfor -%}
-    label = <{{ item["device_name"] }} <br/> {{ item["model"] }} <br/> {{ item["asset"] }} <br/> {{ item["serial"] }} <br/> {{ item["ip"] }}>;
+    label = <{{ item["device_name"] }} <br/> {{ item["model"] }} <br/> {{ item["asset"] }} <br/> {{ item["serial"] }} <br/> {{ item["rack"] }} {{ item["rack-u"] }} <br/> {{ item["ip"] }}>;
   }
 {% endfor %}
 
@@ -107,6 +107,8 @@ def get_items(frame):
             "asset": line["Asset Tag #"],
             "model": line["Make/Model"],
             "serial": line["Serial #"],
+            "rack": line["Rack"],
+            "rack-u": line["U"],
             "ip": line.get("IP Address", ""),
             "modules": modules[line["Device Name"]]
         })
