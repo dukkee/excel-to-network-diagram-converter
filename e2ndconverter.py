@@ -98,9 +98,11 @@ def get_modules(frame):
 
 def get_items(frame):
     data = []
+    added_devices = set()
     modules = get_modules(frame)
 
     for _, line in frame[frame.Action == "Rack"].iterrows():
+        added_devices.add(line["Device Name"])
         data.append({
             "device_name": line["Device Name"],
             "cluster": format_device_name(line["Device Name"]),
@@ -112,6 +114,36 @@ def get_items(frame):
             "ip": line.get("IP Address", ""),
             "modules": modules[line["Device Name"]]
         })
+
+    # Some production sources don't contain the rack statement for many devices
+    # therefore we need to check the connect statements too
+    for _, line in frame[frame.Action == "Connect"].iterrows():
+        if line["Device Name"] not in added_devices:
+            added_devices.add(line["Device Name"])
+            data.append({
+                "device_name": line["Device Name"],
+                "cluster": format_device_name(line["Device Name"]),
+                "asset": line["Asset Tag #"],
+                "model": line["Make/Model"],
+                "serial": line["Serial #"],
+                "rack": line["Rack"],
+                "rack-u": line["U"],
+                "ip": line.get("IP Address", ""),
+                "modules": modules[line["Device Name"]]
+            })
+        if line["Device Name.1"] not in added_devices:
+            added_devices.add(line["Device Name.1"])
+            data.append({
+                "device_name": line["Device Name.1"],
+                "cluster": format_device_name(line["Device Name.1"]),
+                "asset": line["Asset Tag #.1"],
+                "model": line["Make/Model.1"],
+                "serial": line["Serial #.1"],
+                "rack": line["Rack.1"],
+                "rack-u": line["U.1"],
+                "ip": line.get("IP Address", ""),
+                "modules": modules[line["Device Name.1"]]
+            })
 
     return data
 
