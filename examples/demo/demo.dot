@@ -19,7 +19,7 @@ label=<
      </table>>
 
     graph [splines=curved rankdir = "LR"];
-    node [shape = polygon, sides = 8, width = 3, fontsize = 14, color = "#000000" ];
+    node [shape = polygon, sides = 7, width = 4, fontsize = 14, color = "#000000" ];
 
 
 subgraph cluster_B7RNIOS3L2 {
