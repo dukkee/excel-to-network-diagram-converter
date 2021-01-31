@@ -51,7 +51,7 @@ label=<
      </table>>
 
     graph [splines=curved rankdir = "{{ rankdir }}"];
-    node [shape = polygon, sides = 8, width = 3, fontsize = 14, color = "#000000" ];
+    node [shape = polygon, sides = 7, width = 4, fontsize = 14, color = "#000000" ];
 
 {% for item in dots %}
 subgraph cluster_{{ item["cluster"] }} {
