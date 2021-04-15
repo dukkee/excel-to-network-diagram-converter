@@ -12,22 +12,54 @@ __all__ = ["convert"]
 
 
 CONNECTION_COLOR_MAPPING = {
-    "FC 16G": "ff0000",
-    "FC 32G": "1f4800",
-    "QSFP-40/100-SRBD": "026ff0",
-    "QSFP-40/100G-SRBD": "026ff0",
-    " QSFP-40/100-SRBD": "026ff0",
-    "QSFP-100G-SR4": "ff00FF",
-    "QSFP-40G-SR4": "A52A2A",
+    "FC 6G": "b6f542",
+    "FC 16G": "42d7f5",
+    "FC 32G": "f542d4",
+    "QSFP-40/100-SRBD": "FF0000",
+    "QSFP-40/100G-SRBD": "FF0000",
+    "QSFP-40/100-SRBD": "FF0000",
+    "QSFP-40G-SR-BD": "FF0000",
+    "QSFP-100G-SR4": "26fc4a",
+    "100GE FG-TRAN-QSFP28-SR4": "26fc4a",
+    "100G Cisco SR": "26fc4a",
+    "QSFP-100G-SR4-S": "ff0033",
+    "QSFP-100G-LR4-S": "FFC000",
+    "QSFP-100G-LR4": "FFC000",
+    "100G Cisco LR": "FFC000",
+    "QSFP-40G-LR4": "933A32",
+    "QSFP-40G-SR4": "4BACC6",
+    "40G Cisco SR": "4BACC6",
+    "QSFP-40G-SR4-S": "4BACC6",
+    "QSFP-40G-SR4-S+": "4BACC6",
+    "40GE FN-TRAN-QSFP+SR": "4BACC6",
     "FET10G": "0000FF",
-    "SFP-10G-SR": "FFA500",
-    "GX-MM": "800000",
+    "SFP-10G-SR": "000000",
+    "Cisco 10G-SR": "000000",
+    "10G Cisco SR": "000000",
+    "GX-MM": "FF33E6",
+    "GLC-SX-MM": "FF33E6",
+    "569023 - 1G - SR": "FF33E6",
     "SFP-10/25G-CRS-S": "FF5733",
-    "Cisco GLC-T": "33ACFF",
-    "QSFP-100G-SR4-S+": "9C33FF",
+    "10/25GE FN-TRAN-SFP28-SR": "FF5733",
+    "10GE FG-TRAN-SFP+SR": "000000",
+    "FG-TRAN-SFP+SR": "000000",
+    "GLC-SX-MMD": "FF33E6",
+    "Cisco GLC-T": "7030A0",
+    "1G RJ45": "7030A0",
+    "1GE RJ45": "7030A0",
+    " 1GE RJ45": "7030A0",
+    "1G 1GE RJ45": "7030A0",
+    "RJ45": "7030A0",
+    "DB9-RJ45": "7030A0",
+    "DB9-1GE RJ45": "7030A0",
+    "GLC-T": "7030A0",
+    "GLC-TE": "7030A0",
+    "QSFP-100G-SR4-S+": "ff0033",
     "Cisco GLC-SX-MM": "FF33E6",
-    "": "FF3352",
-    "Other use NOTES": "FF3352",
+    "1GE SR": "FF33E6",
+    "(CVR)SFP-10G-SR": "000000",
+    "": "799540",
+    "Other use NOTES": "799540",
 }
 INPUT_ERROR_MESSAGE = "You must determine a correct input file path, output file path and svg output file path!"
 RAW_TEMPLATE = """
@@ -35,35 +67,39 @@ graph {
 
 label=<
      <table border="0" cellborder="1" cellspacing="0">
-       <tr><td bgcolor="#FFFFFFF"><font color="#000000" point-size="8" ><b>Connection Types</b></font></td></tr>
-       <tr><td bgcolor="#FFFFFFF"><font color="#ff0000" point-size="8" ><b>FC 16G</b></font></td></tr>
-       <tr><td bgcolor="#FFFFFFF"><font color="#1f4800" point-size="8" ><b>FC 32G</b></font></td></tr>
-       <tr><td bgcolor="#FFFFFFF"><font color="#026ff0" point-size="8" ><b>SFP-40/100-SRBD</b></font></td></tr>
-       <tr><td bgcolor="#FFFFFFF"><font color="#A52A2A" point-size="8" ><b>QSFP-40G-SR4</b></font></td></tr>
-       <tr><td bgcolor="#FFFFFFF"><font color="#ff00FF" point-size="8" ><b>QSFP-100G-SR4</b></font></td></tr>
-       <tr><td bgcolor="#FFFFFFF"><font color="#0000FF" point-size="8" ><b>FET10G</b></font></td></tr>
-       <tr><td bgcolor="#FFFFFFF"><font color="#FFA500" point-size="8" ><b>SFP-10G-SR</b></font></td></tr>
-       <tr><td bgcolor="#FFFFFFF"><font color="#800000" point-size="8" ><b>GX-MM</b></font></td></tr>
-       <tr><td bgcolor="#FFFFFFF"><font color="#33ACFF" point-size="8" ><b>GLC-T</b></font></td></tr>
-       <tr><td bgcolor="#FFFFFFF"><font color="#9C33FF" point-size="8" ><b>QSFP-100G-SR4-S+</b></font></td></tr>
-       <tr><td bgcolor="#FFFFFFF"><font color="#FF33E6" point-size="8" ><b>GLC-SX-MM</b></font></td></tr>
-       
+        <tr><td bgcolor="#FFFFFFF"><font color="#000000" point-size="16" ><b>Connection Types</b></font></td></tr>
+        <tr><td bgcolor="#FFFFFFF"><font color="#26fc4a" point-size="14" ><b>100G-SR4</b></font></td></tr>
+        <tr><td bgcolor="#FFFFFFF"><font color="#FFC000" point-size="14" ><b>100G-LR4</b></font></td></tr>
+        <tr><td bgcolor="#FFFFFFF"><font color="#0000FF" point-size="14" ><b>FET10G</b></font></td></tr>
+        <tr><td bgcolor="#FFFFFFF"><font color="#FF0000" point-size="14" ><b>40/100-SRBD</b></font></td></tr>
+        <tr><td bgcolor="#FFFFFFF"><font color="#4BACC6" point-size="14" ><b>40G-SR4</b></font></td></tr>
+        <tr><td bgcolor="#FFFFFFF"><font color="#933A32" point-size="14" ><b>40G-LR4</b></font></td></tr>
+        <tr><td bgcolor="#FFFFFFF"><font color="#FF5733" point-size="14" ><b>10/25G SR</b></font></td></tr>
+        <tr><td bgcolor="#FFFFFFF"><font color="#000000" point-size="14" ><b>10G-SR</b></font></td></tr>
+        <tr><td bgcolor="#FFFFFFF"><font color="#FF33E6" point-size="14" ><b>SX-MM</b></font></td></tr>
+        <tr><td bgcolor="#FFFFFFF"><font color="#7030A0" point-size="14" ><b>GLC-TE/UTP/RJ45</b></font></td></tr>
+        <tr><td bgcolor="#FFFFFFF"><font color="#b6f542" point-size="14" ><b>FC 8G</b></font></td></tr>
+        <tr><td bgcolor="#FFFFFFF"><font color="#42d7f5" point-size="14" ><b>FC 16G</b></font></td></tr>
+        <tr><td bgcolor="#FFFFFFF"><font color="#f542d4" point-size="14" ><b>FC 32G</b></font></td></tr>
+        <tr><td bgcolor="#FFFFFFF"><font color="#799540" point-size="14" ><b>Other</b></font></td></tr>
+
+
      </table>>
 
     graph [splines=curved rankdir = "{{ rankdir }}"];
-    node [shape = polygon, sides = 7, width = 4, fontsize = 14, color = "#000000" ];
+    node [shape = polygon, sides = 7, width = 7, fontsize = 14, color = "#000000" ];
 
 {% for item in dots %}
 subgraph cluster_{{ item["cluster"] }} {
     {% for module, port in item["modules"] -%}
     "{{ item["device_name"] }}.{{ module }}/{{ port }}" [label="{{ module }}/{{ port }}"];
     {% endfor -%}
-    label = <{{ item["device_name"] }} <br/> {{ item["model"] }} <br/> {{ item["asset"] }} <br/> {{ item["serial"] }} <br/> {{ item["rack"] }} {{ item["rack-u"] }} <br/> {{ item["ip"] }}>;
+    label = <{{ item["device_name"] }} <br/> {{ item["model"] }} <br/> {{ item["asset"] }} <br/> {{ item["serial"] }} <br/> {{ item["row"] }}-{{ item["rack"] }} {{ item["rack-u"] }} <br/> {{ item["ip"] }}>;
   }
 {% endfor %}
 
 {% for item in connections -%}
-{"{{ item["start_name"] }}" -- "{{ item["end_name"] }}" [color="#{{ item["color"] }}"]} #ConnectionType {{ item[
+{"{{ item["start_name"] }}" -- "{{ item["end_name"] }}" [penwidth=2.5, color="#{{ item["color"] }}"]} #ConnectionType {{ item[
 "type"] }} = {{ item["color"] }}
 {% endfor %}
 
@@ -109,6 +145,7 @@ def get_items(frame):
             "asset": line["Asset Tag #"],
             "model": line["Make/Model"],
             "serial": line["Serial #"],
+            "row": line["Row"],
             "rack": line["Rack"],
             "rack-u": line["U"],
             "ip": line.get("IP Address", ""),
@@ -126,6 +163,7 @@ def get_items(frame):
                 "asset": line["Asset Tag #"],
                 "model": line["Make/Model"],
                 "serial": line["Serial #"],
+                "row": line["Row"],
                 "rack": line["Rack"],
                 "rack-u": line["U"],
                 "ip": line.get("IP Address", ""),
@@ -139,6 +177,7 @@ def get_items(frame):
                 "asset": line["Asset Tag #.1"],
                 "model": line["Make/Model.1"],
                 "serial": line["Serial #.1"],
+                "row": line["Row.1"],
                 "rack": line["Rack.1"],
                 "rack-u": line["U.1"],
                 "ip": line.get("IP Address", ""),
@@ -155,8 +194,8 @@ def get_connections(frame):
         connections.append({
             "start_name": f'{line["Device Name"]}.{format_module(line["Module"])}/{format_port(line["Port"])}',
             "end_name": f'{line["Device Name.1"]}.{format_module(line["Module.1"])}/{format_port(line["Port.1"])}',
-            "type": line["SFP Type"],
-            "color": CONNECTION_COLOR_MAPPING[line["SFP Type"]],
+            "type": line.get("SFP Type", "Other").strip(),
+            "color": CONNECTION_COLOR_MAPPING[line.get("SFP Type", "").strip()],
         })
 
     return connections
