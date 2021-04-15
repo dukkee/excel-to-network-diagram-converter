@@ -2,6 +2,7 @@ import os
 import re
 import sys
 from collections import defaultdict
+from distutils.dir_util import copy_tree
 
 import pandas as pd
 from jinja2 import Template
@@ -235,6 +236,18 @@ def main():
         raise ValueError(INPUT_ERROR_MESSAGE)
 
     convert(input_path, output_path, output_svg_path, rankdir=rankdir)
+
+    with open("static/template.html") as fp:
+        template = fp.read().replace("{{ svg_file_path }}", os.path.basename(output_svg_path) + ".svg")
+
+    with open(os.path.join(output_svg_dirname, "page.html"), "w") as fp:
+        fp.write(template)
+
+    result_static_path = os.path.join(output_svg_dirname, "static")
+    copy_tree("static", result_static_path)
+
+    if output_svg_dirname.replace(".", ""):
+        os.remove(os.path.join(result_static_path, "template.html"))
 
 
 if __name__ == '__main__':

@@ -30,6 +30,17 @@ Converter has a [graphviz](https://graphviz.org/) dependency:
 - [Linux](https://graphviz.org/download/#linux)
 - [Mac](https://graphviz.org/download/#mac)
 
+## Generated webpage
+
+Now with SVG file in the same directory you will get an additional `page.html` file with `static` folder of dependencies. To open this page in your browser without errors, you need to run simple Python or any other web server to serve this page.
+
+To do it with Python you need to open your terminal and make the next commands:
+
+```python
+$ cd page/html/file/path
+$ python3 -m http.server
+```
+
 ## Examples
 
 In [examples](https://github.com/dukkee/excel-to-network-diagram-converter/tree/master/examples) directory you will 
