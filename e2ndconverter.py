@@ -196,7 +196,7 @@ def get_connections(frame):
             "start_name": f'{line["Device Name"]}.{format_module(line["Module"])}/{format_port(line["Port"])}',
             "end_name": f'{line["Device Name.1"]}.{format_module(line["Module.1"])}/{format_port(line["Port.1"])}',
             "type": line.get("SFP Type", "Other").strip(),
-            "color": CONNECTION_COLOR_MAPPING[line.get("SFP Type", "").strip()],
+            "color": CONNECTION_COLOR_MAPPING.get(line.get("SFP Type", "").strip(), CONNECTION_COLOR_MAPPING[""]),
         })
 
     return connections
