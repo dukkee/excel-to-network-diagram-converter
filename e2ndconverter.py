@@ -65,7 +65,7 @@ CONNECTION_COLOR_MAPPING = {
 }
 INPUT_ERROR_MESSAGE = "You must determine a correct input file path, output file path and svg output file path!"
 RAW_TEMPLATE = """
-graph {
+digraph {
 
 label=<
      <table border="0" cellborder="1" cellspacing="0">
@@ -101,7 +101,7 @@ subgraph cluster_{{ item["cluster"] }} {
 {% endfor %}
 
 {% for item in connections -%}
-{"{{ item["start_name"] }}" -- "{{ item["end_name"] }}" [penwidth=2.5, color="#{{ item["color"] }}"]} #ConnectionType {{ item[
+{"{{ item["start_name"] }}" -> "{{ item["end_name"] }}" [penwidth=2.5, color="#{{ item["color"] }}"]} #ConnectionType {{ item[
 "type"] }} = {{ item["color"] }}
 {% endfor %}
 
@@ -241,7 +241,7 @@ def main():
     with open("static/template.html") as fp:
         template = fp.read().replace("{{ svg_file }}", str(DataURI.from_file(output_svg_path + ".svg")))
 
-    with open(os.path.join(output_svg_dirname, "page.html"), "w") as fp:
+    with open(os.path.join(output_svg_dirname, os.path.basename(input_path).rsplit(".", 1)[0] + ".html"), "w") as fp:
         fp.write(template)
 
     result_static_path = os.path.join(output_svg_dirname, "static")
