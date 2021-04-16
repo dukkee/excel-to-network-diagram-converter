@@ -2,3 +2,4 @@ pandas
 jinja2
 graphviz
 openpyxl
+python-datauri

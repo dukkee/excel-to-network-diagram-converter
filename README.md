@@ -32,9 +32,10 @@ Converter has a [graphviz](https://graphviz.org/) dependency:
 
 ## Generated webpage
 
-Now with SVG file in the same directory you will get an additional `page.html` file with `static` folder of dependencies. To open this page in your browser without errors, you need to run simple Python or any other web server to serve this page.
+Now with SVG file in the same directory you will get an additional `page.html` file with `static` folder of 
+dependencies. You can open this page in your browser directly or run simple Python or any other web server to serve this page.
 
-To do it with Python you need to open your terminal and make the next commands:
+To do it with a Python 3 default webserver you need to open your terminal and make the next commands:
 
 ```python
 $ cd page/html/file/path

@@ -30,8 +30,8 @@
         #instructions {
             position: absolute;
             z-index: 100;
-            bottom: 0px;
-            left: 0px;
+            bottom: 0;
+            left: 0;
         }
     </style>
 	<body>
@@ -44,9 +44,11 @@
 		<script type="text/javascript" src="static/js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="static/js/jquery.graphviz.svg.js"></script>
 		<script type="text/javascript">
- 			$(document).ready(function(){
+			var svgDataURL = "{{ svg_file }}";
+
+ 			$(document).ready(function() {
                 $("#graph").graphviz({
-                    url: "{{ svg_file_path }}",
+                    url: svgDataURL,
                     ready: function() {
                         var gv = this;
                         gv.nodes().click(function () {

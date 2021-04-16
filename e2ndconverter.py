@@ -5,6 +5,7 @@ from collections import defaultdict
 from distutils.dir_util import copy_tree
 
 import pandas as pd
+from datauri import DataURI
 from jinja2 import Template
 from graphviz import Source
 
@@ -238,7 +239,7 @@ def main():
     convert(input_path, output_path, output_svg_path, rankdir=rankdir)
 
     with open("static/template.html") as fp:
-        template = fp.read().replace("{{ svg_file_path }}", os.path.basename(output_svg_path) + ".svg")
+        template = fp.read().replace("{{ svg_file }}", str(DataURI.from_file(output_svg_path + ".svg")))
 
     with open(os.path.join(output_svg_dirname, "page.html"), "w") as fp:
         fp.write(template)
