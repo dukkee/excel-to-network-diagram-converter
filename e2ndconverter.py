@@ -217,12 +217,23 @@ def convert(input_path, output_path, output_svg_path, rankdir):
 
 
 def main():
-    if len(sys.argv) < 4 or not os.path.exists(sys.argv[1]):
+    if len(sys.argv) < 2 or not os.path.exists(sys.argv[1]):
         raise ValueError(INPUT_ERROR_MESSAGE)
 
     input_path = sys.argv[1]
-    output_path = sys.argv[2]
-    output_svg_path = sys.argv[3][:-4] if sys.argv[3].endswith(".svg") else sys.argv[3]
+    input_name = os.path.basename(input_path).rsplit(".", 1)[0]
+    input_dirname = os.path.dirname(input_path)
+
+    try:
+        output_path = sys.argv[2]
+    except:
+        output_path = os.path.join(input_dirname, input_name + ".dot")
+
+    try:
+        output_svg_path = sys.argv[3][:-4] if sys.argv[3].endswith(".svg") else sys.argv[3]
+    except:
+        output_svg_path = os.path.join(input_dirname, input_name)
+
     output_dirname = os.path.dirname(output_path)
     output_svg_dirname = os.path.dirname(output_svg_path)
 
@@ -241,13 +252,13 @@ def main():
     with open("static/template.html") as fp:
         template = fp.read().replace("{{ svg_file }}", str(DataURI.from_file(output_svg_path + ".svg")))
 
-    with open(os.path.join(output_svg_dirname, os.path.basename(input_path).rsplit(".", 1)[0] + ".html"), "w") as fp:
+    with open(os.path.join(output_svg_dirname, input_name + ".html"), "w") as fp:
         fp.write(template)
 
     result_static_path = os.path.join(output_svg_dirname, "static")
-    copy_tree("static", result_static_path)
 
     if output_svg_dirname.replace(".", ""):
+        copy_tree("static", result_static_path)
         os.remove(os.path.join(result_static_path, "template.html"))
 
 
