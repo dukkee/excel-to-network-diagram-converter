@@ -4,6 +4,10 @@ Do you need to keep track of all the interfaces that your systems connect to? An
 
 As a bonus, you can also keep track of Serial Numbers, IP addresses, device Location and any other asset information that may be specific to your organization, which is built-in to the diagram and Excel file for easy tracking and documentation.
 
+## Acknowledges
+
+Special thanks to Salman Naqvi, who did most of the work on this project, including preparing the raw data and verifying the results. Without his knowledge, this tool would not have been implemented.
+
 ## Usage
 
 ```bash
