@@ -11,7 +11,7 @@ Special thanks to Salman Naqvi, who did most of the work on this project, includ
 ## Usage
 
 ```bash
-python e2ndconverter.py demo.xlsx demo.dot demo.svg [LR|TB]
+python e2ndconverter.py demo.xlsx [demo.dot] [demo.svg] [LR|TB]
 ```
 
 Most of the above command is self-explanatory. demo.xlsx is the input Excel file which has the connection details. 
@@ -34,17 +34,14 @@ Converter has a [graphviz](https://graphviz.org/) dependency:
 - [Linux](https://graphviz.org/download/#linux)
 - [Mac](https://graphviz.org/download/#mac)
 
-## Generated webpage
+## Dynamic Clickable Diagram
 
 Now with SVG file in the same directory you will get an additional `page.html` file with `static` folder of 
 dependencies. You can open this page in your browser directly or run simple Python or any other web server to serve this page.
 
-To do it with a Python 3 default webserver you need to open your terminal and make the next commands:
+## Video Demonstration
 
-```python
-$ cd page/html/file/path
-$ python3 -m http.server
-```
+Check out a demonstration, tutorial and use cases of this tool [here on YouTube](https://www.youtube.com/watch?v=SeFb1XfDo1Y)
 
 ## Examples
 
